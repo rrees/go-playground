@@ -5,8 +5,12 @@ import (
 )
 
 func main() {
+	fmt.Print("|")
 	for i := 0; i < 20; i++ {
-	fmt.Print(D(10), " ")
+		if i > 0 {
+			fmt.Print(" ")
+		}
+		fmt.Print(D(2, 6))
 	}
-	fmt.Println("")
+	fmt.Println("|")
 }
