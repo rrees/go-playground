@@ -9,7 +9,12 @@ func random() *rand.Rand {
 	return rand.New(rand.NewSource(time.Now().UnixNano()))
 }
 
-func D(numberOfDice int, maxSides int) int {
+type RollResult struct {
+	total int
+	results []int
+}
+
+func D(numberOfDice int, maxSides int) RollResult {
 	r := random()
 	results := make([]int, numberOfDice)
 	for i := 0; i < numberOfDice; i++ {
@@ -22,5 +27,8 @@ func D(numberOfDice int, maxSides int) int {
 		total += results[i]
 	}
 
-	return total
+	return RollResult{
+		total,
+		results,
+	}
 }
