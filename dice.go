@@ -35,7 +35,7 @@ func D(roll RollRequest) RollResult {
 	}
 
 	return RollResult{
-		total,
+		total + roll.modifier,
 		results,
 	}
 }
