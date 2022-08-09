@@ -10,7 +10,7 @@ func main() {
 		if i > 0 {
 			fmt.Print(" ")
 		}
-		fmt.Print(D(2, 6))
+		fmt.Print(D(RollRequest{2, 6, 0}))
 	}
 	fmt.Println("|")
 }
