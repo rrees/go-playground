@@ -1,7 +1,9 @@
 
+EXECUTABLE_NAME=dice
+
 .PHONY: run
-run:
-	go run *.go
+run: build
+	./${EXECUTABLE_NAME}
 
 .PHONY: fmt
 fmt:
@@ -10,3 +12,6 @@ fmt:
 .PHONY: test
 test:
 	go test
+
+build:
+	go build -o ${EXECUTABLE_NAME}
