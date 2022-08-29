@@ -23,7 +23,7 @@ type RollResult struct {
 func D(roll RollRequest) RollResult {
 	r := random()
 	results := make([]int, roll.numberOfDice)
-	
+
 	for i := 0; i < roll.numberOfDice; i++ {
 		results[i] = 1 + r.Intn(roll.sides)
 	}
